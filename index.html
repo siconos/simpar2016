@@ -6,30 +6,118 @@
 </head>
 <body class="c3">
 <div style="float: right;"><span style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 129.11px; height: 52.50px;"><img alt="inriacl.png" src="images/image00.png" style="width: 129.11px; height: 52.50px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title=""></span></div>
-  <p class="c0 title" id="h.racptkguwdkv"><span class="c6">SIMPAR</span><span class="c6">&nbsp;2016, half-day Tutorial: </span><span class="c6 c8">Modeling and simulating mechanical rigid-body systems using Siconos</span></p>
+<p class="c0 title" id="h.racptkguwdkv"><span class="c6">SIMPAR</span>
+  <span class="c6">&nbsp;2016,
+  half-day Tutorial: </span><span class="c6 c8">Modeling and
+  simulating mechanical rigid-body systems using Siconos</span></p>
 <h5 class="c0" id="h.9i1er79vl6qw"><span>Organizers.</span></h5>
-<p class="c1"><span>Vincent Acary and Stephen Sinclair, Inria Chile.</span></p>
+<p class="c1"><span>Vincent Acary and Stephen Sinclair, Inria
+Chile.</span></p>
 <h5 class="c0" id="h.hxnc181426at"><span>Abstract.</span></h5>
-<p class="c1"><span>Siconos is a system (C++ framework with Python wrapper) for modeling and numerically simulating nonsmooth dynamical systems. &nbsp;At a mathematical level, it allows to specify models as a set of dynamical systems constrained by interactions based on relations measured on their state vectors. &nbsp;On this is built a variety of higher-level frameworks including systems for mechanical rigid body modeling, electrical circuits, and biological networks. &nbsp;In this tutorial we will demonstrate and explain how to use Siconos for modeling robotics-related mechanical systems, and use them for interaction with large-grain granular materials.</span></p>
+<p class="c1"><span>Siconos is a system (C++ framework with Python
+wrapper) for modeling and numerically simulating nonsmooth dynamical
+systems. &nbsp;At a mathematical level, it allows to specify models as
+a set of dynamical systems constrained by interactions based on
+relations measured on their state vectors. &nbsp;On this is built a
+variety of higher-level frameworks including systems for mechanical
+rigid body modeling, electrical circuits, and biological
+networks. &nbsp;In this tutorial we will demonstrate and explain how
+to use Siconos for modeling robotics-related mechanical systems, and
+use them for interaction with large-grain granular
+materials.</span></p>
 <h5 class="c0" id="h.4k8w2fwzr6c"><span>Content.</span></h5>
-<p class="c1 c4"><span>Siconos, created in 2005 for bipedal robot modeling, is a class framework and set of solvers for general modeling and simulation of nonsmooth dynamical systems; that is to say, dynamical systems featuring hard, non-linear constraints such as mechanical contact-friction problems, as well as simulation of nonlinearities in electrical circuits (e.g. diodes) and biological networks (e.g. neural firing), etc. &nbsp;Dynamical systems are formalised as a collection of dynamical system objects which are related in a graph by interactions. &nbsp;Interactions define laws constraining relations between state vectors. &nbsp;In a Siconos simulation step, state vectors are integrated and subsequently formulated into a mathematical programming problem (linear or second order cone complementarity problem, variational inequality, ...) &nbsp;which is then solved by a number of available solvers, the most common being the Gauss-Seidel iterative method for the large scale mechanical systems.</span></p>
-<img src="images/bucket.png" style="float: right;" width="336" height="200" />
-<p class="c1 c4"><span>While Siconos can be used through this interface oriented toward the mathematical problem formulation, for common problem domains it is more convenient to use domain-specific interfaces that have been developed on top of this. &nbsp;For mechanics, Siconos provides objects that encapsulate Newton-Euler (maximal coordinates) and Lagrangian (generalized coordinates) formulates of mechanical systems along with 3D friction contact constraint laws that are able to simulate rigid body systems. &nbsp;An abstraction layer finally wraps this in an interface that associates weighted bodies with contact shapes, and dynamically handles interaction lifetimes (contact constraints) based on broadphase collision detection; this can be accessed using C++ or completely controlled via Python. &nbsp;This layer provides a complete rigid body simulator that can be integrated into any software.</span></p>
-<p class="c1 c4"><span>Finally, a Python abstraction layer handles specification and serialisation of simulation data into an HDF5-based file format which we use for viewing and further exporting into other data formats, such as for the Visualisation Toolkit (VTK) and Paraview. We also will present current work on integrating this mechanics layer of Siconos as a new physics back-end for the Gazebo robotics simulator.</span></p>
+<p class="c1 c4"><span>Siconos, created in 2005 for bipedal robot
+modeling, is a class framework and set of solvers for general modeling
+and simulation of nonsmooth dynamical systems; that is to say,
+dynamical systems featuring hard, non-linear constraints such as
+mechanical contact-friction problems, as well as simulation of
+nonlinearities in electrical circuits (e.g. diodes) and biological
+networks (e.g. neural firing), etc. &nbsp;Dynamical systems are
+formalised as a collection of dynamical system objects which are
+related in a graph by interactions. &nbsp;Interactions define laws
+constraining relations between state vectors. &nbsp;In a Siconos
+simulation step, state vectors are integrated and subsequently
+formulated into a mathematical programming problem (linear or second
+order cone complementarity problem, variational inequality, ...)
+&nbsp;which is then solved by a number of available solvers, the most
+common being the Gauss-Seidel iterative method for the large scale
+mechanical systems.</span></p>
+<img src="images/bucket.png" style="float: right;" width="336" height="200">
+<p class="c1 c4"><span>While Siconos can be used through this
+interface oriented toward the mathematical problem formulation, for
+common problem domains it is more convenient to use domain-specific
+interfaces that have been developed on top of this. &nbsp;For
+mechanics, Siconos provides objects that encapsulate Newton-Euler
+(maximal coordinates) and Lagrangian (generalized coordinates)
+formulates of mechanical systems along with 3D friction contact
+constraint laws that are able to simulate rigid body systems. &nbsp;An
+abstraction layer finally wraps this in an interface that associates
+weighted bodies with contact shapes, and dynamically handles
+interaction lifetimes (contact constraints) based on broadphase
+collision detection; this can be accessed using C++ or completely
+controlled via Python. &nbsp;This layer provides a complete rigid body
+simulator that can be integrated into any software.</span></p>
+<p class="c1 c4"><span>Finally, a Python abstraction layer handles
+specification and serialisation of simulation data into an HDF5-based
+file format which we use for viewing and further exporting into other
+data formats, such as for the Visualisation Toolkit (VTK) and
+Paraview. We also will present current work on integrating this
+mechanics layer of Siconos as a new physics back-end for the Gazebo
+robotics simulator.</span></p>
 <video src="images/one-wall-1000.mp4" controls autoplay loop width="150" style="float: left; margin: 0.5cm">
-  <img src="images/one-wall-1000.gif" style="float: left; margin: 0.5cm" />
+  <img src="images/one-wall-1000.gif" style="float: left; margin: 0.5cm">
 </video>
-<p class="c1 c4"><span>Siconos&rsquo; strength comes from this flexible framework that can be used to introduce new algorithms and formalisms at a variety of abstraction levels. &nbsp;Its design focuses on a strict separation of modeling and numerical simulation aspects, which allows for a particularly modular approach. &nbsp;This tutorial will present Siconos as a simulation API but also expose the audience to how Siconos encodes the mathematical formalisms expressed by Siconos&rsquo; kernel layer and numerics solver, and provides hooks via composition and inheritance to test and integrate new algorithms and formalisms.</span></p>
-<p class="c1 c4"><span>Furthermore, some unique capabilities of Siconos will be highlighted, such as its implementation of true second-order cone friction for implementing Coulomb friction, and its multiplicity of solvers and integration schemes with various order and structural properties will be discussed. &nbsp;Apart from this presentation of the software, the tutorial will take the audience through a simple mechanical system example (a bouncing ball, then a system of bouncing balls) from its mathematical formulation through to its encoding as a Siconos simulation at various layers of abstraction:</span></p>
+<p class="c1 c4"><span>Siconos&rsquo; strength comes from this
+flexible framework that can be used to introduce new algorithms and
+formalisms at a variety of abstraction levels. &nbsp;Its design
+focuses on a strict separation of modeling and numerical simulation
+aspects, which allows for a particularly modular approach. &nbsp;This
+tutorial will present Siconos as a simulation API but also expose the
+audience to how Siconos encodes the mathematical formalisms expressed
+by Siconos&rsquo; kernel layer and numerics solver, and provides hooks
+via composition and inheritance to test and integrate new algorithms
+and formalisms.</span></p>
+<p class="c1 c4"><span>Furthermore, some unique capabilities of
+Siconos will be highlighted, such as its implementation of true
+second-order cone friction for implementing Coulomb friction, and its
+multiplicity of solvers and integration schemes with various order and
+structural properties will be discussed. &nbsp;Apart from this
+presentation of the software, the tutorial will take the audience
+through a simple mechanical system example (a bouncing ball, then a
+system of bouncing balls) from its mathematical formulation through to
+its encoding as a Siconos simulation at various layers of
+abstraction:</span></p>
 <ul class="c2 lst-kix_ex50db19kjkf-0 start c9">
-<li class="c1 c7"><span>As a mathematical object (dynamical system + interaction)</span></li>
-<li class="c1 c7"><span>As a mechanical system (objects with shape and contact mechanics)</span></li>
-<li class="c1 c7"><span>As a simulation scene (description in Python)</span></li>
-<li class="c1 c7"><span>As a model that can be combined with others (via Gazebo)</span></li>
+<li class="c1 c7"><span>As a mathematical object (dynamical system +
+interaction)</span></li>
+<li class="c1 c7"><span>As a mechanical system (objects with shape and
+contact mechanics)</span></li>
+<li class="c1 c7"><span>As a simulation scene (description in
+Python)</span></li>
+<li class="c1 c7"><span>As a model that can be combined with others
+(via Gazebo)</span></li>
 </ul>
-<p class="c1 c4 c9"><span>Following this tutorial, audience members should gain familiarity with the problem of nonsmooth dynamical system modeling and its relation to mechanical rigid body simulation, and understand how to tackle and explore such problems using the Siconos framework.</span></p>
-<h5 class="c0" id="h.h25r4yxvb7fx"><span>Plan to encourage interaction among participants.</span></h5>
-<p class="c1"><span>Although this tutorial will be heavily presentation-based, we plan to include a number of video-based and interactive examples from basic (bouncing ball) to complex (robotic system with granular material), which should cover a fair number of application areas of interest to audience members. We also plan to show a variety of ways of using Siconos, from C++ to interactive Python to graphical interaction using Gazebo. &nbsp;We hope that this will stimulate discussion and solicit ideas and problem cases from the audience to discuss. &nbsp;Furthermore, we will provide a means for users to try Siconos during the tutorial session by means of a VM or Docker image, possibly by a web interface (TBD), and finally by installing it locally on their machine if they so choose.</span></p>
-<p class="c1 c9">More information about Siconos can be found <a href="http://siconos.gforge.inria.fr/">at its homepage</a>.</p>
+<p class="c1 c4 c9"><span>Following this tutorial, audience members
+should gain familiarity with the problem of nonsmooth dynamical system
+modeling and its relation to mechanical rigid body simulation, and
+understand how to tackle and explore such problems using the Siconos
+framework.</span></p>
+<h5 class="c0" id="h.h25r4yxvb7fx"><span>Plan to encourage interaction
+among participants.</span></h5>
+<p class="c1"><span>Although this tutorial will be heavily
+presentation-based, we plan to include a number of video-based and
+interactive examples from basic (bouncing ball) to complex (robotic
+system with granular material), which should cover a fair number of
+application areas of interest to audience members. We also plan to
+show a variety of ways of using Siconos, from C++ to interactive
+Python to graphical interaction using Gazebo. &nbsp;We hope that this
+will stimulate discussion and solicit ideas and problem cases from the
+audience to discuss. &nbsp;Furthermore, we will provide a means for
+users to try Siconos during the tutorial session by means of a VM or
+Docker image, possibly by a web interface (TBD), and finally by
+installing it locally on their machine if they so choose.</span></p>
+<p class="c1 c9">More information about Siconos can be
+found <a href="http://siconos.gforge.inria.fr/">at its
+homepage</a>.</p>
 </body>
 </html>
